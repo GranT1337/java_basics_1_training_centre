@@ -1,4 +1,4 @@
-package demoService;
+package demo;
 
 import data.CourseData;
 import data.CurriculumData;
@@ -20,6 +20,11 @@ public class DemoService {
         System.out.println("4.b. СОРТИРОВКА ПО ВРЕМЕНИ ДО ОКОНЧАНИЯ ОБУЧЕНИЯ");
         System.out.println("=================================================");
         consoleOutputShowService.showListStudentsByDaysRemaining();
+        System.out.println("=================================================");
+
+        System.out.println("5. Список студентов, у которых есть вероятность, что не будут отчислены");
+        System.out.println("=================================================");
+        consoleOutputShowService.showListStudentsWhoWillNotBeExpelled();
         System.out.println("=================================================");
     }
 }

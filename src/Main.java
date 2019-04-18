@@ -1,4 +1,4 @@
-import demoService.DemoService;
+import demo.DemoService;
 
 public class Main {
 

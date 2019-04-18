@@ -46,6 +46,20 @@ public class ConsoleOutputShowService {
         }
     }
 
+    public void showListStudentsWhoWillNotBeExpelled() {
+        for (Student student : studentData.getListStudents()) {
+            int remainingDays = studentService.getRemainingDaysByStudent(student);
+            int remainingHours = studentService.getRemainingHoursByStudent(student);
+            int studentStatus = studentService.studentOpportunityToStudyFuther(student);
+
+            if (!(remainingDays == 0 & remainingHours == 0)) {
+                if (studentStatus == 1 || studentStatus == 2) {
+                    showToConsole(student);
+                }
+            }
+        }
+    }
+
     private void studentStatus(Student student) {
 
         int remainingDays = studentService.getRemainingDaysByStudent(student);
