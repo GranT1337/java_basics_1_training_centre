@@ -48,7 +48,7 @@ public class StudentService {
     }
 
     // Вывод количества полных дней, сколько занимают все курсы
-    public int getCurriculumDurationDays(Curriculum curriculum) {
+    private int getCurriculumDurationDays(Curriculum curriculum) {
         return (int) Math.ceil(getCurriculumDurationHours(curriculum) / 8.0);
     }
 

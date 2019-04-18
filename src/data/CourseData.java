@@ -15,7 +15,7 @@ public class CourseData {
         fillCourses();
     }
 
-    public void fillCourses() {
+    private void fillCourses() {
 
         courseListForJavaScript.add(new Course(1, "HTML", 16));
         courseListForJavaScript.add(new Course(2, "CSS", 15));

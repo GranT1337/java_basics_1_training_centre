@@ -14,7 +14,7 @@ public class CurriculumData {
         fillCurriculum();
     }
 
-    public void fillCurriculum() {
+    private void fillCurriculum() {
 
         curriculumList.add(new Curriculum(1, "J2EE Developer",
                                                 new CourseData().getCourseListForJava2EE()));

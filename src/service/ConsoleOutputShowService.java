@@ -13,12 +13,12 @@ public class ConsoleOutputShowService {
     private StudentData studentData = new StudentData();
 
 
-    public void showToConsole(Student student) {
+    private void showToConsole(Student student) {
         System.out.println(student.getName() + " - До окончания обучения по программе "
                 + student.getCurriculum().getTitle() + " осталось "
                 + studentService.getRemainingDaysByStudent(student) + " дн. "
                 + studentService.getRemainingHoursByStudent(student) + " ч."
-                + "Средний балл " + studentService.getAVGMarksByStudent(student) + ".");
+                + " Средний балл " + studentService.getAVGMarksByStudent(student) + ".");
 
         studentStatus(student);
         System.out.println();
@@ -46,7 +46,7 @@ public class ConsoleOutputShowService {
         }
     }
 
-    public void studentStatus(Student student) {
+    private void studentStatus(Student student) {
 
         int remainingDays = studentService.getRemainingDaysByStudent(student);
         int remainingHours = studentService.getRemainingHoursByStudent(student);

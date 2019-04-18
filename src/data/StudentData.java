@@ -19,7 +19,7 @@ public class StudentData {
         fillStudents();
     }
 
-    public void fillStudents() {
+    private void fillStudents() {
         listStudents.add(new Student(1, "Ostanin Kirill", createMarks(3),
                             studentService.getCurriculumListById(1), LocalDate.now().minusDays(3)));
 
